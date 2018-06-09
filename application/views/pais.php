@@ -58,7 +58,7 @@
                         <td><?= $p['nome'] ?></td>
                         <td><?= $this->Database_model->get('regiao',$p['id_regiao'])['regiao'] ?></td>
                         <td>
-                            <button class="btnExcluirPais btn btn-sm btn-outline-danger">Excluir</button>
+                            <button data-id="<?= $p['id'] ?>" class="btnExcluirPais btn btn-sm btn-outline-danger">Excluir</button>
                         </td>
                     </tr>
                 <?php endforeach; endif; ?>
@@ -69,3 +69,4 @@
 </div>
 
 <script src="<?= base_url('assets/js/pais/add_pais.js') ?>"></script>
+<script src="<?= base_url('assets/js/pais/del_pais.js') ?>"></script>

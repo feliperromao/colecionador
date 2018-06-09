@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <form>
+            <form id="frmCadastroMoeda" >
                 <div class="row">
                     <div class="col-md">
                         <div class="form-group">

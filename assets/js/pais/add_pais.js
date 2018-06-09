@@ -15,8 +15,8 @@ $(function(){
                 url: base_url + 'home/add_pais',
                 error: response=>{
                     const text = `<p>Erro ao inserir esse país</p><p>${response.responseText}</p>`
-                    const notifiAddSuccess = addNotify('success', 'País adicionado com <strong>sucesso</strong>')
-                    $("#notificacoes").prepend(notifiAddSuccess);
+                    const notify = addNotify('success', 'País adicionado com <strong>sucesso</strong>')
+                    $("#notificacoes").prepend(notify);
                 }
             }).done(response=>{
                 const paisCadastrado =
@@ -28,12 +28,12 @@ $(function(){
                         </td>
                     </tr>`
                 $("#listPaisCadastrados").prepend(paisCadastrado)
-                const notifiAddSuccess = addNotify('success', 'País adicionado com <strong>sucesso</strong>')
-                $("#notificacoes").prepend(notifiAddSuccess)
+                const notify = addNotify('success', 'País adicionado com <strong>sucesso</strong>')
+                $("#notificacoes").prepend(notify)
             })
         }else{
-            const notifiCamposValidacao = addNotify('danger', 'Favor preencha os campos <strong>corretamente</strong>')
-            $("#notificacoes").prepend(notifiCamposValidacao)
+            const notify = addNotify('danger', 'Favor preencha os campos <strong>corretamente</strong>')
+            $("#notificacoes").prepend(notify)
         }
     })
 })

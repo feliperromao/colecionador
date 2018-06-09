@@ -14,8 +14,8 @@ $(function(){
                 type: 'post',
                 url: base_url + 'home/add_moeda',
                 error: response=>{
-                    const notifiCamposValidacao = addNotify('warning', `<p>Erro ao adicionar moeda.</p><p>${response.responseText}</p>`)
-                    $("#notificacoes").prepend(notifiCamposValidacao);
+                    const notify = addNotify('warning', `<p>Erro ao adicionar moeda.</p><p>${response.responseText}</p>`)
+                    $("#notificacoes").prepend(notify);
                 }
             }).done(response=>{
                 const dados =
@@ -26,13 +26,13 @@ $(function(){
                             <button data-id='${response.id_moeda}' class='btnExcluirMoeda btn btn-sm btn-outline-danger' >Excluir</button>
                         </td>
                     </tr>`;
-                $("#listMateriaisCadastrados").prepend(dados);
-                const notifiCamposValidacao = addNotify('success', `Moeda adicionada com <strong>sucesso!</strong>`)
-                $("#notificacoes").prepend(notifiCamposValidacao);
+                $("#listMoedasCadastradas").prepend(dados);
+                const notify = addNotify('success', `Moeda adicionada com <strong>sucesso!</strong>`)
+                $("#notificacoes").prepend(notify);
             })
         }else{
-            const notifiCamposValidacao = addNotify('danger', 'Favor preencha os campos <strong>corretamente.</strong>')
-            $("#notificacoes").prepend(notifiCamposValidacao);
+            const notify = addNotify('danger', 'Favor preencha os campos <strong>corretamente.</strong>')
+            $("#notificacoes").prepend(notify);
         }
     })
 })

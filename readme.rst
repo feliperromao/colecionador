@@ -2,8 +2,15 @@
 Colecionador
 ###################
 
-Colecionador é um sistema para colecionadores de moedas.
+Colecionador é um sistema para colecionadores de moedas
 Nele podemos guardar as informações sobre cada moeda
+
+**************************
+Changelog and New Features
+**************************
+
+Finalizando os scripts de delete do cadastro de regiões
+
 
 *******************
 Server Requirements

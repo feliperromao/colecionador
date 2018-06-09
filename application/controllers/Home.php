@@ -135,6 +135,18 @@ class Home extends CI_Controller {
         }
     }
 
+    public function del_pais(){
+        if( !$this->input->post('id_pais') ){
+            return FALSE;
+        }
+        $id_pais = $this->input->post('id_pais');
+        if( $this->Database_model->del('pais', $id_pais) ){
+            echo json_encode(['response'=>TRUE]);
+        }else{
+            return FALSE;
+        }
+    }
+
     public function add_material(){
         if( !$this->input->post('tipo') ){
             return FALSE;
@@ -171,6 +183,18 @@ class Home extends CI_Controller {
 
         if( $id_regiao ){
             echo json_encode(['id_regiao'=> $id_regiao]);
+        }else{
+            return FALSE;
+        }
+    }
+
+    public function del_regiao(){
+        if( !$this->input->post('id_regiao') ){
+            return FALSE;
+        }
+        $id_regiao = $this->input->post('id_regiao');
+        if( $this->Database_model->del('regiao', $id_regiao) ){
+            echo json_encode(['response'=>TRUE]);
         }else{
             return FALSE;
         }
