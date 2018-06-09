@@ -33,16 +33,14 @@
                         <li class="nav-item <?= ($this->router->fetch_class() == 'home' && $this->router->fetch_method() == 'moeda' )? 'active' : null ?>">
                             <a class="nav-link" href="<?= base_url('moeda') ?>">Moeda</a>
                         </li>
-                        <li class="nav-item <?= ($this->router->fetch_class() == 'home' && $this->router->fetch_method() == 'material' )? 'active' : null ?>">
-                            <a class="nav-link" href="<?= base_url('material') ?>">Material</a>
-                        </li>
-
                         <li class="nav-item <?= ($this->router->fetch_class() == 'home' && $this->router->fetch_method() == 'pais' )? 'active' : null ?>">
                             <a class="nav-link" href="<?= base_url('pais') ?>">País</a>
                         </li>
-
                         <li class="nav-item <?= ($this->router->fetch_class() == 'home' && $this->router->fetch_method() == 'regiao' )? 'active' : null ?>">
                             <a class="nav-link" href="<?= base_url('regiao') ?>">Região</a>
+                        </li>
+                        <li class="nav-item <?= ($this->router->fetch_class() == 'home' && $this->router->fetch_method() == 'material' )? 'active' : null ?>">
+                            <a class="nav-link" href="<?= base_url('material') ?>">Material</a>
                         </li>
                     </ul>
                 </div>
