@@ -13,7 +13,7 @@ $(function(){
                     $("#notificacoes").prepend(notify);
                 }
             }).done(_=>{
-                
+
             })
         }
 
